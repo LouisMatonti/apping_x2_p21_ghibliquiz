@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PeopleDetail">
+
+    <TextView
+            android:id="@+id/correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/init"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.365"/>
+
+    <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/correct"/>
+
+    <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/init"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/titleLabel"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" android:layout_marginStart="12dp"/>
+
+    <TextView
+            android:id="@+id/yearLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titleLabel" android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:id="@+id/yearView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/init"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@+id/yearLabel"
+            app:layout_constraintTop_toBottomOf="@+id/yearLabel"/>
+
+    <TextView
+            android:id="@+id/directorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Director"
+            app:layout_constraintStart_toStartOf="@+id/titleView"
+            app:layout_constraintTop_toBottomOf="@+id/titleView"/>
+
+    <TextView
+            android:id="@+id/directorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/init"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/directorLabel"
+            app:layout_constraintTop_toBottomOf="@+id/directorLabel"/>
+
+    <TextView
+            android:id="@+id/synopsisLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Synopsis"
+            app:layout_constraintStart_toStartOf="@+id/directorView"
+            app:layout_constraintTop_toBottomOf="@+id/directorView"/>
+
+    <TextView
+            android:id="@+id/synopsisView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/init"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/synopsisLabel" app:layout_constraintHorizontal_bias="0.483"
+            android:layout_marginTop="4dp"/>
+
+    <TextView
+            android:id="@+id/charactersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Characters"
+            app:layout_constraintStart_toStartOf="@+id/synopsisLabel"
+            app:layout_constraintTop_toBottomOf="@+id/synopsisView" android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"/>
+
+    <TextView
+            android:id="@+id/charactersView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/init"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/charactersLabel"
+            app:layout_constraintTop_toBottomOf="@+id/charactersLabel" android:layout_marginTop="4dp"/>
+
+    <Button
+            android:id="@+id/button_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Would you like to know more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charactersView" app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintVertical_bias="0.095"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
