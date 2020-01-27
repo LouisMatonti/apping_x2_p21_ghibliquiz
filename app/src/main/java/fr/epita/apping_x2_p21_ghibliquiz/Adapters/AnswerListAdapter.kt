@@ -13,8 +13,8 @@ import fr.epita.apping_x2_p21_ghibliquiz.Models.PeopleObject
 import fr.epita.apping_x2_p21_ghibliquiz.R
 import java.util.*
 
-const val genderMaleUrl = "https://img.icons8.com/ultraviolet/40/000000/male.png"
-const val genderFemaleUrl = "https://img.icons8.com/ultraviolet/40/000000/female.png"
+const val genderMaleUrl = "https://images.emojiterra.com/twitter/v12/512px/2642.png"
+const val genderFemaleUrl = "https://images.emojiterra.com/twitter/v12/512px/2640.png"
 
 class AnswerListAdapter(
     private val context : Context,

@@ -51,11 +51,11 @@ class PeopleDetail : AppCompatActivity(), View.OnClickListener {
                 val rCode = response.code()
                 if (rCode == 200) {
                     if (response.body() != null) {
-                        val chosenFilm = response.body()!!
-                        titleView.text = chosenFilm.title
-                        synopsisView.text = chosenFilm.description
-                        directorView.text = chosenFilm.director
-                        yearView.text = chosenFilm.release_date
+                        val chosenF = response.body()!!
+                        titleView.text = chosenF.title
+                        synopsisView.text = chosenF.description
+                        directorView.text = chosenF.director
+                        yearView.text = chosenF.release_date
                     }
                 }
             }
@@ -66,9 +66,9 @@ class PeopleDetail : AppCompatActivity(), View.OnClickListener {
         if (clickedView != null) {
             when (clickedView.id) {
                 R.id.button_people -> {
-                    val openURL = Intent(Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://google.com/search?q="+titleView.text)
-                    startActivity(openURL)
+                    val url = Intent(Intent.ACTION_VIEW)
+                    url.data = Uri.parse("https://google.com/search?q="+titleView.text)
+                    startActivity(url)
                 }
             }
         }
