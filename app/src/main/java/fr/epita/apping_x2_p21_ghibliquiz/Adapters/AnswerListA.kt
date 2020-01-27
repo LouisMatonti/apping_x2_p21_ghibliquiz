@@ -16,11 +16,11 @@ import java.util.*
 const val genderMaleUrl = "https://images.emojiterra.com/twitter/v12/512px/2642.png"
 const val genderFemaleUrl = "https://images.emojiterra.com/twitter/v12/512px/2640.png"
 
-class AnswerListAdapter(
+class AnswerListA(
     private val context : Context,
     private val data: ArrayList<PeopleObject>,
     private val itemOnClickListener: View.OnClickListener
-) : RecyclerView.Adapter<AnswerListAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<AnswerListA.ViewHolder>() {
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val nameView: TextView = itemView.findViewById(R.id.name)

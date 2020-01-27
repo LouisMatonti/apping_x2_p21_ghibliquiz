@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.GsonBuilder
-import fr.epita.apping_x2_p21_ghibliquiz.Adapters.AnswerListAdapter
+import fr.epita.apping_x2_p21_ghibliquiz.Adapters.AnswerListA
 import fr.epita.apping_x2_p21_ghibliquiz.Interfaces.GhibliInterface
 import fr.epita.apping_x2_p21_ghibliquiz.Models.FilmObject
 import fr.epita.apping_x2_p21_ghibliquiz.Models.PeopleObject
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(explicitIntent)
     }
     @SuppressLint("WrongConstant")
-    fun initListWithAnswers(answsers: ArrayList<PeopleObject>) {
+    fun initListWithAnswers(answers: ArrayList<PeopleObject>) {
         val itemClickListener = View.OnClickListener {
             val peopleName = it.tag as String
             Log.d("TEST", "clicked on row $peopleName")
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         answersView.addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.VERTICAL))
         answersView.setHasFixedSize(true)
         answersView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        answersView.adapter = AnswerListAdapter(this, answsers, itemClickListener)
+        answersView.adapter = AnswerListA(this, answers, itemClickListener)
     }
     fun getAnswers(peopleList: ArrayList<PeopleObject>, chosenFilmId: String): ArrayList<PeopleObject> {
         val answers: ArrayList<PeopleObject> = arrayListOf()
@@ -111,8 +111,8 @@ class MainActivity : AppCompatActivity() {
                         val peopleList = response.body()!!
                         Log.d("APP", "retrieved pple_list")
                         val chosenFilmId: String = getChosenFilmId(peopleList)
-                        val answers: ArrayList<PeopleObject> = getAnswers(peopleList, chosenFilmId)
-                        initListWithAnswers(answers)
+                        val answer: ArrayList<PeopleObject> = getAnswers(peopleList, chosenFilmId)
+                        initListWithAnswers(answer)
                         service.getFilmDetail(chosenFilmId).enqueue(callbackF)
                     }
                 }
