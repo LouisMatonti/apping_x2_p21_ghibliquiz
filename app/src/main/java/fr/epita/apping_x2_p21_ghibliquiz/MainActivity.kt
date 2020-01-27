@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        answers.add((0..6).random(), goodP)
         return answers
     }
     fun getChosenFilmId(ppleList: ArrayList<PeopleObject>): String {
